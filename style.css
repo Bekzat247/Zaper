@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 10vh 1fr;
+    height: 100vh;
+    grid-template-areas: 'h h' 'a m';
+}
+
+header {
+    grid-area: h;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    padding: 0 37px;
+}
+
+aside {
+    grid-area: a;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+    width: 100%;
+    border-radius: 8px;
+    border: 0;
+    height: 70px;
+    background: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color-scheme: #2c384f;
+    cursor: pointer;
+}
+
+aside>button:not(:first-child) {
+    /* margin-top: 25px; */
+    height: 54px;
+}
+
+aside>button:hover {
+    background-color: rgba(120, 79, 254, 0.12);
+    color: #784ffe;
+
+}
+
+aside>button:active {
+    background: #784ffe;
+    color: white;
+}
+
+aside .lastbutton {
+    color: #EB3B5A;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+aside .lastbutton:hover {
+    color: red;
+}
+
+aside .lastbutton:active {
+    background-color: #eb3b5b7d;
+}
+
+main {
+    grid-area: m;
+    display: grid;
+    grid-template-areas:
+        "o o o o o o o o o o o o "
+        "n n n n n n i i i e e e "
+        "p p p p p p p p a a a a "
+        "t t t t t t t t a a a a ";
+    grid-template-rows: 0.8fr 2.5fr fr 2fr;
+    padding: 30px;
+    grid-gap: 20px;
+    background-color: #e5e5e5;
+}
+
+/* header,
+main,
+aside {
+    border: 1px solid black;
+}
+
+main>div {
+    border: 1px solid black;
+} */
+.income,
+.netWorth,
+.expences {
+    height: 187px;
+}
+
+header {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.Overview {
+    grid-area: o;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.Overview h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2C384F;
+}
+
+.Overview button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #724BF2;
+    padding: 11px 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.Overview button:hover {
+    background-color: rgba(120, 79, 254, 0.601);
+}
+
+.Overview button:active {
+    background: #784ffe;
+}
+
+.netWorth {
+    grid-area: n;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tittle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #899BBE;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 5px;
+}
+
+.currentprice h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2C384F;
+}
+
+.price p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #20bf6b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.button_wrapper button {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: none;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+
+}
+
+.button_wrapper button:first-child {
+    background: #724BF2;
+    color: white;
+}
+
+.button_wrapper button:last-child {
+    background: #ECE6FF;
+    border-radius: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2C384F;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.income {
+    grid-area: i;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.currentprice {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 5px;
+    color: #2C384F;
+}
+
+.income div {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.income div p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #20bf6b;
+}
+
+.portfolio {
+    grid-area: p;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.portfolio h3,
+.transactions h3,
+.all-assets h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #2C384F;
+}
+
+.portfolio-header {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.portfolio-header>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.portfolio-header>select {
+    padding: 8px 10px;
+    background-color: #EFEBFF;
+    border-radius: 12px;
+    border: none;
+}
+
+.portfolio_body>div {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+
+}
+
+.border {
+    width: 100%;
+    border: 1px dashed #2C384F4D;
+}
+
+.portfolio_body {
+    position: relative;
+}
+
+.portfolio_body div>p {
+    font-family: 'Inter';
+    width: 10%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #899BBE;
+
+}
+
+.portfolio_body>div {
+    margin-top: 25px;
+}
+
+.columns_wrapper {
+    position: absolute;
+    bottom: 8px;
+    left: 85px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    align-items: flex-end !important;
+}
+
+.columns_wrapper>div {
+    position: relative;
+    width: 36px;
+    background: #724bf2;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.columns_wrapper>div p {
+    position: absolute;
+    text-align: center;
+    bottom: -20px;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C384F;
+
+
+}
+
+.jan,
+.may {
+    height: 43px;
+}
+
+.feb {
+    height: 74px;
+}
+
+.mar {
+    height: 129px;
+}
+
+.apr,
+.jul {
+    height: 86px;
+}
+
+.jun {
+    height: 64px;
+}
+
+.aug {
+    height: 113px;
+}
+
+.sep {
+    height: 104px;
+}
+
+.oct {
+    height: 53px;
+}
+
+.assets {
+    grid-area: a;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.all-assets {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.assetscoin .coins {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.assetscoin button {
+    margin-top: 10px;
+    width: 100%;
+    height: 38px;
+    background-color: #724BF2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+
+}
+.assetscoin button:hover{
+    background-color: #8260f2;
+}
+.assetscoin button:active{
+    background-color: #6236f4;
+}
+
+.assets_left_p h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C384F;
+}
+
+.assets_right_p div {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #20BF6B;
+
+}
+
+.osobennyi_assets span {
+    color: #EB3B5A;
+}
+
+.assets_left_p p,
+.assets_right_p p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #899BBE;
+}
+
+.transactions {
+    grid-area: t;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.transactions div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transactions div button {
+    width: 146px;
+    height: 32px;
+    background-color: #6334FE1F;
+    color: #724BF2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #724BF2;
+    border: none;
+    cursor: pointer;
+}
+
+.transactions div p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C384F;
+}
+
+.line {
+    border: 1px dashed rgba(44, 56, 79, 0.3);
+    height: 1px;
+}
+
+.William {
+    margin-bottom: 10px;
+}
+
+.Samuel {
+    margin-top: 10px;
+}
+
+.expences {
+    grid-area: e;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.expences div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.expences div p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #EB3B5A;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.input-wrapper input {
+    height: 40px;
+    width: 340px;
+    background-color: #f5f7fa;
+    border-radius: 8 px;
+    border: none;
+    outline: 0;
+    padding-left: 20px;
+    background-image: url(./images/search-normal.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 96%;
+}
+
+.header_right_content {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-wrapper button {
+    border: 0;
+    background-color: white;
+}
+
+.input-wrapper input::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #899BBE;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_right_content select {
+    border: none;
+}
+
+.header_right_content a {
+    display: flex;
+    justify-content: center;
+}
+
+.header_right_content button {
+    border: none;
+    background: none;
+}
+
+.flag-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.block {
+    display: none;
+}
+
+.blockblue:hover block {
+    display: block;
+}
